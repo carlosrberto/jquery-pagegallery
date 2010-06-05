@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>jQuery PageGallery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="media/jquery.pagegalery.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="media/jquery.js"></script>
+    <script type="text/javascript" src="media/jquery.pagegalery.1.0.min.js"></script>
+    <style type="text/css">
+        ul, li{ margin:0; padding:0; }
+        body{ font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif; color:#666; }
+        .disable { color:#333; text-decoration:underline }
+        a{ outline:0; color:#999; }
+        #links{ clear:both; padding:30px 0 0 0; }
+        #gallery{ width:640px; float:left; display:inline; margin:0 30px 0 0 ; }
+        #pagegallery_thumbs{ width:480px; overflow:hidden; margin:30px 0 0 0; float:left; display:inline; }
+        #pagegallery_thumbs li{ float:left; display:inline; margin:0 20px 20px 0 }
+        #pagegallery_thumbs li img{ border:2px dotted #999; }
+        #pagegallery_thumbs li a:hover img{ border:2px dotted #fff; }
+        #link_download{ font-size:26px; }
+        #link_download:hover{ color:#666; }
+    </style>
+    <script type="text/javascript">
+    
+    $(document).ready(function() {
+          $("#gallery").pagegallery({width:640, imagelist:'#pagegallery_thumbs' });
+          $("#gallery").bind('imagechange', function(event, index, title, n){
+              //do something
+          });
+    });        
+    </script>
+</head>
+<body>
+    
+    <h1>jQuery PageGallery</h1>
+    
+    <p>A highly customizable jQuery image gallery</p>
+    
+    <div id="gallery">
+        
+    </div>
+    
+
+    <ul id="pagegallery_thumbs">
+        <li><a href="media/images/photo_01.jpg" title="Picture 1"><img src="media/images/thumb_01.jpg"></a></li>
+        <li><a href="media/images/photo_02.jpg" title="Picture 2"><img src="media/images/thumb_02.jpg"></a></li>
+        <li><a href="media/images/photo_03.jpg" title="Picture 3"><img src="media/images/thumb_03.jpg"></a></li>
+        <li><a href="media/images/photo_04.jpg" title="Picture 4"><img src="media/images/thumb_04.jpg"></a></li>
+        <li><a href="media/images/photo_05.jpg" title="Picture 5"><img src="media/images/thumb_05.jpg"></a></li>
+    </ul>
+    
+    
+    <div id="links">
+        <a href="#" id="pagegallery_prev">Prev</a>
+        <a href="#" id="pagegallery_next">Next</a>
+        <a href="#" id="pagegallery_play">Play</a>
+        <a href="#" id="pagegallery_pause">Pause</a>
+        <a href="#" id="pagegallery_control">Play Pause</a>
+    </div>
+    
+    <p><a href="https://code.google.com/p/pagegallery/" id="link_download">Donwload jQuery PageGallery from Google Code</a></p>
+
+</body>
+</html>
