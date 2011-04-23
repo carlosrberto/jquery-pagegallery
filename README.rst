@@ -5,7 +5,7 @@ jQuery Pagegallery - A highly customizable jQuery image gallery
 The **pagegallery** plugin is a highly customizable image gallery created by the Web Developer Carlos Roberto with the jQuery Javascript library.
 
 
-With some CSS lines you can easy customize it. All you need is a list of links, an array or a json list.
+With a few CSS lines you can easy customize it. All you need is a list of links, an array or a json list.
 
 100% cross-browser, works on all modern browsers (including IE6).
 
